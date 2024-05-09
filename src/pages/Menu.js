@@ -1,38 +1,27 @@
-import React from 'react'
-import Layout from '../Components/Layout/Layout'
-import{MenuList}from'../data/data'
-import {
-  Box,
-  Card,
-  CardActionArea,
-  CardContent,
-  CardMedia,
-  Typography,
-} from "@mui/material";
+import React from 'react';
+import Layout from '../Components/Layout/Layout';
+import { MenuList } from '../data/data';
 
 const Menu = () => {
   return (
     <Layout>
-      <Box sx={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
-        {MenuList.map((menu) => (
-          <Card sx={{ maxWidth: "390px", display: "flex", m: 2 }}>
-            <CardActionArea>
-              <CardMedia
-                sx={{ minHeight: "400px" }}
-                component={"img"}
+      <div className="flex flex-wrap justify-center">
+        {MenuList.map((menu, index) => (
+          <div key={index} className="max-w-md m-2">
+            <div className="bg-white rounded-lg overflow-hidden shadow-md">
+              <img
+                className="w-full h-64 object-cover"
                 src={menu.image}
                 alt={menu.name}
               />
-              <CardContent>
-                <Typography variant="h5" gutterBottom component={"div"}>
-                  {menu.name}
-                </Typography>
-                <Typography variant="body2">{menu.description}</Typography>
-              </CardContent>
-            </CardActionArea>
-          </Card>
+              <div className="p-4">
+                <h5 className="text-xl font-bold mb-2">{menu.name}</h5>
+                <p className="text-gray-700">{menu.description}</p>
+              </div>
+            </div>
+          </div>
         ))}
-      </Box>
+      </div>
     </Layout>
   );
 };

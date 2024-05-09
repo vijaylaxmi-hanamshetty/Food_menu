@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import {
   AppBar,
@@ -9,17 +10,17 @@ import {
   Typography,
 } from "@mui/material";
 import Logo from "../../images/logo.svg";
-
+import "../../styles/HeaderStyle.css"
 import MenuIcon from "@mui/icons-material/Menu";
 import { NavLink } from "react-router-dom";
-import "../../styles/HeaderStyle.css"
+
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
-  // hndle menu click
+  
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
-  //menu drawer
+ 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography
