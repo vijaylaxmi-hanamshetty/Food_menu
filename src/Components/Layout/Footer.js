@@ -14,13 +14,10 @@ const Footer = () => {
           <GitHubIcon className="text-white text-3xl cursor-pointer hover:text-yellow-500 transition duration-400 transform hover:translate-x-1 mr-2" />
           <YouTubeIcon className="text-white text-3xl cursor-pointer hover:text-yellow-500 transition duration-400 transform hover:translate-x-1" />
         </div>
-        <p className="text-lg">
-          Welcome to &copy; 2024
-        </p>
+        <p className="text-lg">Welcome to &copy; 2024</p>
       </footer>
     </>
   );
 };
 
 export default Footer;
-
